@@ -23,8 +23,8 @@ const Index = () => {
   const [remoteOpen, setRemoteOpen] = useState(false);
 
   const handleRemoteAccess = () => {
-    // Trigger AnyDesk download
-    window.location.href = ANYDESK_URL;
+    // Open AnyDesk download in a new tab
+    window.open(ANYDESK_URL, "_blank", "noopener,noreferrer");
     // Show instructions modal
     setTimeout(() => setRemoteOpen(true), 300);
   };
