@@ -14,7 +14,7 @@ export const Audience = () => (
       <SectionHeading eyebrow="Para Quem" title="Para quem a HELPSAM atende?" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {items.map(({ icon: Icon, title, text }) => (
-          <div key={title} className="bg-card rounded-2xl p-7 border border-border shadow-card hover:shadow-card-hover transition-smooth text-center">
+          <div key={title} className="reveal-on-scroll bg-card rounded-2xl p-7 border border-border shadow-card hover:shadow-card-hover transition-smooth text-center">
             <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-blue flex items-center justify-center mb-4 shadow-button">
               <Icon className="w-7 h-7 text-primary-foreground" strokeWidth={1.75} />
             </div>

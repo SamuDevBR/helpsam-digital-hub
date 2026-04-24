@@ -12,7 +12,7 @@ export const Differentials = () => (
     <div className="section-container">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {items.map(({ icon: Icon, title, text }) => (
-          <div key={title} className="group bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-card-hover transition-smooth hover:-translate-y-1">
+          <div key={title} className="reveal-on-scroll group bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-card-hover transition-smooth hover:-translate-y-1">
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-gradient-blue transition-smooth">
               <Icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-smooth" />
             </div>
