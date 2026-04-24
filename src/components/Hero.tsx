@@ -35,7 +35,7 @@ export const Hero = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="xl" className="border-primary text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-[1.03] hover:shadow-glow animate-shimmer-badge">
+              <Button asChild variant="outline" size="xl" className="border-primary text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-[1.03] hover:shadow-glow animate-[shimmer-badge_14s_ease-in-out_infinite]">
                 <a href="#servicos">Conhecer soluções</a>
               </Button>
             </div>
