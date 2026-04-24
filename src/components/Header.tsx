@@ -58,7 +58,7 @@ export const Header = ({ onRemoteAccess }: HeaderProps) => {
               key={item.href}
               href={item.href}
               onClick={(e) => handleClick(e, item)}
-              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-smooth rounded-md"
+              className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-smooth rounded-md whitespace-nowrap"
             >
               {item.label}
             </a>
