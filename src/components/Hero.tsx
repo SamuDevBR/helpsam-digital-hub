@@ -18,15 +18,15 @@ export const Hero = () => {
       <div className="section-container relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-6 animate-shimmer-badge">
+              <Sparkles className="w-4 h-4 animate-sparkle text-primary" />
               Suporte humano. Soluções inteligentes.
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] text-secondary mb-6">
-              Suporte de TI em <span className="text-gradient">Araçatuba, Birigui e região</span>, automações e soluções digitais para sua casa ou empresa
+              Suporte de TI em <span className="text-gradient">Araçatuba e região</span> para sua casa ou negócio.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              A HELPSAM oferece suporte técnico, manutenção de computadores, redes, impressoras, criação de sites, desenvolvimento de sistemas, chatbots e automações com inteligência artificial. Serviços para residências, comércios, profissionais autônomos, pequenas e grandes empresas.
+              A Helpsam oferece suporte técnico, manutenção e soluções de computadores no geral, criação de sites, desenvolvimento de sistemas e automações com IA. Soluções para tudo e todos.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <Button asChild variant="hero" size="xl">
@@ -35,7 +35,7 @@ export const Hero = () => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="xl">
+              <Button asChild variant="outline" size="xl" className="hover-scale transition-all hover:shadow-card-hover hover:border-primary hover:text-primary">
                 <a href="#servicos">Conhecer soluções</a>
               </Button>
             </div>
