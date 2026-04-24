@@ -134,3 +134,22 @@
 .animate-fade-up { animation: fade-up 0.6s ease-out both; }
 .animate-float { animation: float 4s ease-in-out infinite; }
 .animate-pulse-ring { animation: pulse-ring 2s infinite; }
+
+/* Reveal on scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
