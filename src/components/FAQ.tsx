@@ -18,7 +18,7 @@ export const FAQ = () => (
       <SectionHeading eyebrow="FAQ" title="Perguntas frequentes" />
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`item-${i}`} className="bg-card border border-border rounded-2xl px-5 shadow-card">
+          <AccordionItem key={i} value={`item-${i}`} className="reveal-on-scroll bg-card border border-border rounded-2xl px-5 shadow-card">
             <AccordionTrigger className="text-left font-display font-semibold text-secondary hover:no-underline py-5">
               {f.q}
             </AccordionTrigger>

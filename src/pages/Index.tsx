@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useReveal } from "@/hooks/use-reveal";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Differentials } from "@/components/Differentials";
@@ -20,6 +21,7 @@ import { ANYDESK_URL } from "@/lib/contact";
 
 const Index = () => {
   const [remoteOpen, setRemoteOpen] = useState(false);
+  useReveal();
 
   const handleRemoteAccess = () => {
     // Open AnyDesk download in a new tab
