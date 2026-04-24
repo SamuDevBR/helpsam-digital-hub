@@ -3,12 +3,22 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const testimonials = [
-  { name: "Cliente residencial", text: "Atendimento rápido, explicou tudo com clareza e resolveu o problema do meu computador." },
-  { name: "Comércio local", text: "Precisávamos organizar melhor alguns processos e recebemos uma solução simples e prática." },
-  { name: "Pequena empresa", text: "O suporte remoto ajudou bastante e evitou que a equipe ficasse parada." },
-  { name: "Profissional autônomo", text: "Gostei da atenção e da forma como as opções foram explicadas antes do serviço." },
-  { name: "Escritório", text: "A configuração da impressora e da rede ficou funcionando corretamente." },
-  { name: "Loja", text: "A HELPSAM ajudou a transformar uma rotina manual em algo mais organizado." },
+  { name: "Silvana Borges", text: "Atendimento rápido, explicou tudo com clareza e resolveu o problema do meu computador." },
+  { name: "Gabriel Batista", text: "Precisávamos organizar melhor alguns processos e recebemos uma solução simples e prática." },
+  { name: "Jhonatan Silva", text: "O suporte remoto ajudou bastante e evitou que a equipe ficasse parada." },
+  { name: "Caio Santos", text: "Gostei da atenção e da forma como as opções foram explicadas antes do serviço." },
+  { name: "Regina Florencio", text: "A configuração da impressora e da rede ficou funcionando corretamente." },
+  { name: "Ronaldo Alves", text: "A HELPSAM ajudou a transformar uma rotina manual em algo mais organizado." },
+  { name: "Marli Rodrigues", text: "Profissionais atenciosos e que entendem do que estão falando. Recomendo." },
+  { name: "Wagner Soares", text: "Resolveram a lentidão do meu notebook em pouco tempo, ficou como novo." },
+  { name: "Rafael Oliveira", text: "Implantaram um chatbot que agilizou muito o atendimento dos meus clientes." },
+  { name: "Maria Helena", text: "Site novo ficou lindo e fácil de mexer. Já comecei a receber contatos pelo formulário." },
+  { name: "Ricardo Martinelli", text: "Suporte de TI confiável, sempre que precisei tive retorno rápido." },
+  { name: "Marcelo Owen", text: "Trabalho sério e transparente, explicaram cada etapa antes de executar." },
+  { name: "José Magalhães", text: "Resolveram um problema de rede que vinha me incomodando há semanas." },
+  { name: "Ryan Gustavo", text: "Atendimento humano e técnico ao mesmo tempo. Muito satisfeito com o resultado." },
+  { name: "Aline Zanquetta", text: "A automação que fizeram economizou horas do meu dia a dia." },
+  { name: "Janaina Pascoal", text: "Excelente custo-benefício e entrega no prazo combinado." },
 ];
 
 export const Testimonials = () => {
@@ -48,7 +58,7 @@ export const Testimonials = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-secondary text-sm">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">Depoimento</div>
+                    <div className="text-xs text-muted-foreground">Cliente HELPSAM</div>
                   </div>
                 </div>
               </article>

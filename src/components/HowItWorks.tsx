@@ -17,7 +17,7 @@ export const HowItWorks = () => (
         <div className="absolute left-7 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent lg:-translate-x-px" />
         <div className="space-y-8">
           {steps.map(({ icon: Icon, title, text }, i) => (
-            <div key={title} className={`relative flex gap-5 lg:gap-8 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+            <div key={title} className={`reveal-on-scroll relative flex gap-5 lg:gap-8 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
               <div className="lg:w-1/2 flex lg:justify-end">
                 <div className={`relative z-10 w-14 h-14 rounded-2xl bg-gradient-blue flex items-center justify-center text-primary-foreground font-display font-extrabold shadow-glow shrink-0 ${i % 2 === 1 ? "lg:order-last" : ""}`}>
                   <Icon className="w-6 h-6" />
