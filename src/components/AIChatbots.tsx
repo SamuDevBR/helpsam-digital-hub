@@ -17,23 +17,34 @@ export const AIChatbots = () => (
     <div className="section-container">
       <SectionHeading
         eyebrow="IA & Chatbots"
-        title="Chatbots e Inteligência Artificial para melhorar seu atendimento"
+        title="Automatização, chatbots e IA"
         subtitle="A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade."
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
         {items.map((s) => <ServiceCard key={s.title} {...s} />)}
       </div>
-      <p className="text-center text-lg lg:text-xl font-display font-semibold text-secondary max-w-3xl mx-auto leading-relaxed mb-10">
-        Mais agilidade no atendimento, menos tarefas repetitivas e mais tempo para focar no crescimento do seu negócio.
-      </p>
-      <div className="flex justify-center">
-        <Button asChild variant="hero" size="xl">
-          <a href="#contato">
-            <span className="sm:hidden">Automatizar empresa</span>
-            <span className="hidden sm:inline">Quero automatizar minha empresa</span>
-            <ArrowRight className="w-5 h-5" />
-          </a>
-        </Button>
+      <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12 text-center shadow-glow relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+          }}
+        />
+        <div className="relative">
+          <h3 className="text-2xl lg:text-3xl font-display font-bold text-primary-foreground mb-6">
+            Mais agilidade no atendimento, menos tarefas repetitivas e mais tempo para focar no crescimento do seu negócio.
+          </h3>
+          <div className="flex justify-center">
+            <Button asChild variant="whatsapp" size="xl">
+              <a href="#contato">
+                <span className="sm:hidden">Automatizar empresa</span>
+                <span className="hidden sm:inline">Quero automatizar minha empresa</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
