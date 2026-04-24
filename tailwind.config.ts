@@ -72,10 +72,22 @@ export default {
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
         "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+        "sparkle": {
+          "0%, 100%": { transform: "rotate(0deg) scale(1)", opacity: "1" },
+          "25%": { transform: "rotate(15deg) scale(1.2)", opacity: "0.85" },
+          "50%": { transform: "rotate(-10deg) scale(1.15)", opacity: "1" },
+          "75%": { transform: "rotate(8deg) scale(1.1)", opacity: "0.9" },
+        },
+        "shimmer-badge": {
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--primary) / 0)" },
+          "50%": { boxShadow: "0 0 0 4px hsl(var(--primary) / 0.12)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "sparkle": "sparkle 2.4s ease-in-out infinite",
+        "shimmer-badge": "shimmer-badge 2.8s ease-in-out infinite",
       },
     },
   },
