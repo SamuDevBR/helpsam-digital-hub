@@ -30,7 +30,7 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <Button asChild variant="hero" size="xl">
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                <a href="#contato">
                   Solicitar atendimento
                   <ArrowRight className="w-5 h-5" />
                 </a>
