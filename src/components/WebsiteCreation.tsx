@@ -2,7 +2,6 @@ import { Globe, Target, Smartphone, Search, MessageCircle, ArrowRight } from "lu
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "@/components/ui/button";
-import { whatsappLink } from "@/lib/contact";
 
 const items = [
   { icon: Globe, title: "Sites institucionais", text: "Sites profissionais para apresentar sua empresa, serviços, diferenciais e formas de contato." },
@@ -25,7 +24,7 @@ export const WebsiteCreation = () => (
       </div>
       <div className="text-center">
         <Button asChild variant="hero" size="xl">
-          <a href={whatsappLink("Olá! Quero criar meu site com a HELPSAM.")} target="_blank" rel="noopener noreferrer">
+          <a href="#contato">
             Quero criar meu site
             <ArrowRight className="w-5 h-5" />
           </a>
