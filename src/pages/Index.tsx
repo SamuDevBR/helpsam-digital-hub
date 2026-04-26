@@ -37,8 +37,8 @@ const Index = () => {
         <Hero />
         <Differentials />
         <ServicesIT />
-        <AIChatbots />
         <WebsiteCreation />
+        <AIChatbots />
         <Audience />
         <LocalSEO />
         <HowItWorks />

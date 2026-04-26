@@ -17,9 +17,9 @@ export const Hero = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Strong overlay so text stays readable */}
-        <div className="absolute inset-0 bg-background/85" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
+        {/* Lighter overlay so the video shows through more */}
+        <div className="absolute inset-0 bg-background/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/35 via-background/55 to-background/85" />
       </div>
 
       {/* Decorative tech grid */}
