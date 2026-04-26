@@ -11,12 +11,15 @@ const items = [
 ];
 
 const Card = ({ icon: Icon, title, text }: typeof items[number]) => (
-  <div className="reveal-on-scroll group bg-card rounded-2xl p-6 border border-border shadow-card hover:shadow-card-hover transition-smooth hover:-translate-y-1 h-full">
-    <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-gradient-blue transition-smooth">
-      <Icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-smooth" />
+  <div
+    className="reveal-on-scroll group rounded-2xl p-6 border border-white/10 shadow-card hover:shadow-card-hover transition-smooth hover:-translate-y-1 h-full"
+    style={{ backgroundColor: "#0231C3" }}
+  >
+    <div className="w-12 h-12 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-4 group-hover:bg-white transition-smooth">
+      <Icon className="w-6 h-6 text-white group-hover:text-[#0231C3] transition-smooth" />
     </div>
-    <h3 className="font-display font-bold text-lg text-secondary mb-2">{title}</h3>
-    <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
+    <h3 className="font-display font-bold text-lg text-white mb-2">{title}</h3>
+    <p className="text-sm text-white/85 leading-relaxed">{text}</p>
   </div>
 );
 

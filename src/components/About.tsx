@@ -5,9 +5,12 @@ import officeImg from "@/assets/helpsam-office.png";
 export const About = () => (
   <section id="sobre" className="py-20 lg:py-28 bg-background">
     <div className="section-container max-w-6xl">
-      <SectionHeading eyebrow="Sobre" title="Sobre a HELPSAM" />
+      {/* Mobile: keep heading on top */}
+      <div className="lg:hidden">
+        <SectionHeading eyebrow="Sobre" title="Sobre a HELPSAM" />
+      </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-blue opacity-10 rounded-3xl blur-2xl" />
           <img
@@ -21,8 +24,19 @@ export const About = () => (
         </div>
 
         <div>
+          {/* Desktop: heading next to image, above text */}
+          <div className="hidden lg:block mb-6">
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+              Sobre
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-extrabold text-secondary leading-tight">
+              Sobre a HELPSAM
+            </h2>
+            <div className="mt-4 h-1 w-16 bg-gradient-blue rounded-full" />
+          </div>
+
           <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
-            A HELPSAM nasceu com o objetivo de tornar a tecnologia mais simples, acessível e útil para pessoas e empresas. Unimos suporte técnico, manutenção de computadores, consultoria em TI, criação de sites, desenvolvimento de sistemas, automações e inteligência artificial para ajudar clientes a resolver problemas, organizar processos e ganhar produtividade.
+            A HELPSAM nasceu com o objetivo de tornar a tecnologia mais simples, acessível e útil para pessoas e empresas.
           </p>
 
           <div className="mt-8 bg-gradient-hero rounded-2xl p-7 lg:p-8 text-center shadow-glow relative overflow-hidden">

@@ -22,7 +22,13 @@ export const AIChatbots = () => (
         style={{ backgroundImage: `url(${aiBg})` }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/70 to-background" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(52,63,76,0.92) 0%, rgba(52,63,76,0.82) 60%, hsl(var(--background)) 100%)",
+        }}
+      />
     </div>
 
     <div className="section-container relative">
