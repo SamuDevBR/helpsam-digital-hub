@@ -1,6 +1,6 @@
 import { Bot, FileQuestion, BrainCircuit, Send, FileText, Database, ArrowRight } from "lucide-react";
 import { ServiceCard } from "./ServiceCard";
-import { SectionHeading } from "./SectionHeading";
+
 import { Button } from "@/components/ui/button";
 import aiBg from "@/assets/ai-bg.jpg";
 
