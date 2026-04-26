@@ -20,8 +20,6 @@ import sitePetshop from "@/assets/site-petshop.jpg";
 import siteModa from "@/assets/site-moda.jpg";
 
 const items = [
-  { icon: Globe, title: "Sites institucionais", text: "Sites profissionais para apresentar sua empresa, serviços, diferenciais e formas de contato." },
-  { icon: Target, title: "Landing pages", text: "Páginas focadas em conversão para divulgar serviços, campanhas, produtos ou captação de clientes." },
   { icon: Smartphone, title: "Sites responsivos", text: "Layouts adaptados para celular, tablet e computador, com navegação simples e rápida." },
   { icon: Search, title: "SEO básico", text: "Estrutura pensada para ajudar o site a ser encontrado no Google, com títulos, descrições e conteúdo organizado." },
   { icon: MessageCircle, title: "Integração com WhatsApp", text: "Botões de contato direto para facilitar o atendimento e gerar mais oportunidades." },
@@ -51,7 +49,7 @@ export const WebsiteCreation = () => {
         <SectionHeading
           eyebrow="Criação de Sites"
           title="Criação de sites profissionais para negócios locais"
-          subtitle="A HELPSAM também cria sites modernos, responsivos e otimizados para ajudar empresas, comércios e profissionais autônomos a terem presença digital com mais credibilidade."
+          subtitle="Sites modernos, responsivos e otimizados para ajudar empresas, comércios, profissionais autônomos a terem presença digital com mais credibilidade, alta captação de clientes e conversão."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {items.map((s) => <ServiceCard key={s.title} {...s} />)}

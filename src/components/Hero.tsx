@@ -6,8 +6,8 @@ import heroVideo from "@/assets/hero-video.mp4.asset.json";
 export const Hero = () => {
   return (
     <section id="inicio" className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-soft">
-      {/* Mobile-only background video */}
-      <div className="absolute inset-0 lg:hidden pointer-events-none overflow-hidden">
+      {/* Background video (all breakpoints) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <video
           src={heroVideo.url}
           autoPlay
@@ -17,7 +17,6 @@ export const Hero = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Lighter overlay so the video shows through more */}
         <div className="absolute inset-0 bg-background/55" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/35 via-background/55 to-background/85" />
       </div>
