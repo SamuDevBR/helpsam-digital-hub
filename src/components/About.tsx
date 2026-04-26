@@ -43,7 +43,7 @@ export const About = () => (
           </div>
 
           <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
-            A HELPSAM nasceu com o objetivo de tornar a tecnologia mais simples, acessível e útil para pessoas e empresas.
+            A HELPSAM nasceu com o objetivo de tornar a tecnologia mais simples, acessível e útil para pessoas e empresas, soluções prontas para tudo e todos.
           </p>
 
           <div className="mt-6 bg-gradient-hero rounded-2xl p-6 lg:p-7 text-center shadow-glow relative overflow-hidden">

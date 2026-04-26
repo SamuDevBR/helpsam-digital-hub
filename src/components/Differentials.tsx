@@ -27,13 +27,28 @@ export const Differentials = () => {
 
   return (
     <section
-      className="py-16 lg:py-20"
+      className="relative py-16 lg:py-20 overflow-hidden"
       style={{
         background:
-          "linear-gradient(135deg, #0231C3 0%, #0a3fd6 50%, #0231C3 100%)",
+          "radial-gradient(1200px 600px at 0% 0%, #1f4ee0 0%, transparent 60%), radial-gradient(900px 500px at 100% 100%, #001a7a 0%, transparent 55%), linear-gradient(135deg, #0231C3 0%, #0a2db0 50%, #021a85 100%)",
       }}
     >
-      <div className="section-container">
+      {/* decorative orbs */}
+      <div className="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-white/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-16 w-96 h-96 rounded-full bg-primary-glow/20 blur-3xl" />
+      {/* subtle grid pattern */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "44px 44px",
+          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative section-container">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider">
             Custo-benefício
