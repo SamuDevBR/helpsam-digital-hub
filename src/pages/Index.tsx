@@ -6,7 +6,7 @@ import { Differentials } from "@/components/Differentials";
 import { ServicesIT } from "@/components/ServicesIT";
 import { WebsiteCreation } from "@/components/WebsiteCreation";
 import { AIChatbots } from "@/components/AIChatbots";
-import { Audience } from "@/components/Audience";
+
 import { LocalSEO } from "@/components/LocalSEO";
 import { HowItWorks } from "@/components/HowItWorks";
 import { About } from "@/components/About";
@@ -39,7 +39,7 @@ const Index = () => {
         <ServicesIT />
         <WebsiteCreation />
         <AIChatbots />
-        <Audience />
+        
         <LocalSEO />
         <HowItWorks />
         <About />

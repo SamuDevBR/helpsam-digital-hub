@@ -32,12 +32,16 @@ export const AIChatbots = () => (
     </div>
 
     <div className="section-container relative">
-      <div className="text-center text-primary-foreground [&_*]:!text-primary-foreground">
-        <SectionHeading
-          eyebrow="IA & Chatbots"
-          title="Automatização, chatbots e IA"
-          subtitle="A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade."
-        />
+      <div className="text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "#343F4C" }}>
+          IA & Chatbots
+        </div>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-primary-foreground leading-tight mb-4 max-w-3xl mx-auto">
+          Automatização, chatbots e IA
+        </h2>
+        <p className="text-base lg:text-lg text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto mb-12">
+          A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade.
+        </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
         {items.map((s) => <ServiceCard key={s.title} {...s} />)}
