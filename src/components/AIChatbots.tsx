@@ -2,6 +2,7 @@ import { Bot, FileQuestion, BrainCircuit, Send, FileText, Database, ArrowRight }
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "@/components/ui/button";
+import aiBg from "@/assets/ai-bg.jpg";
 
 const items = [
   { icon: Bot, title: "Chatbots para atendimento inicial", text: "Responda dúvidas frequentes, colete informações e direcione clientes de forma automática." },
@@ -13,13 +14,25 @@ const items = [
 ];
 
 export const AIChatbots = () => (
-  <section id="ia" className="py-20 lg:py-28 bg-background">
-    <div className="section-container">
-      <SectionHeading
-        eyebrow="IA & Chatbots"
-        title="Automatização, chatbots e IA"
-        subtitle="A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade."
+  <section id="ia" className="relative py-20 lg:py-28 bg-background overflow-hidden">
+    {/* Stylish AI background behind the heading */}
+    <div className="absolute top-0 left-0 right-0 h-[480px] lg:h-[520px] pointer-events-none">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${aiBg})` }}
+        aria-hidden="true"
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/85 via-secondary/70 to-background" />
+    </div>
+
+    <div className="section-container relative">
+      <div className="text-center text-primary-foreground [&_*]:!text-primary-foreground">
+        <SectionHeading
+          eyebrow="IA & Chatbots"
+          title="Automatização, chatbots e IA"
+          subtitle="A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade."
+        />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
         {items.map((s) => <ServiceCard key={s.title} {...s} />)}
       </div>

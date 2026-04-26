@@ -1,10 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Wrench, Laptop, Globe, Code2, Bot, Sparkles } from "lucide-react";
 import { whatsappLink } from "@/lib/contact";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export const Hero = () => {
   return (
     <section id="inicio" className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-soft">
+      {/* Mobile-only background video */}
+      <div className="absolute inset-0 lg:hidden pointer-events-none overflow-hidden">
+        <video
+          src={heroVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Strong overlay so text stays readable */}
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
+      </div>
+
       {/* Decorative tech grid */}
       <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
