@@ -13,9 +13,19 @@ export const faqs = [
 ];
 
 export const FAQ = () => (
-  <section className="py-20 lg:py-28 bg-background">
-    <div className="section-container max-w-3xl">
-      <SectionHeading eyebrow="FAQ" title="Perguntas frequentes" />
+  <section className="py-20 lg:py-28 bg-gradient-hero relative overflow-hidden">
+    <div
+      className="absolute inset-0 opacity-[0.07] pointer-events-none"
+      style={{
+        backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
+        backgroundSize: "60px 60px",
+      }}
+    />
+    <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary-glow/30 rounded-full blur-3xl pointer-events-none" />
+    <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl pointer-events-none" />
+
+    <div className="section-container max-w-3xl relative">
+      <SectionHeading eyebrow="FAQ" title="Perguntas frequentes" light />
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
           <AccordionItem key={i} value={`item-${i}`} className="reveal-on-scroll bg-card border border-border rounded-2xl px-5 shadow-card">
