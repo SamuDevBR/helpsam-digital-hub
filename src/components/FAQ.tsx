@@ -25,7 +25,9 @@ export const FAQ = () => (
     <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl pointer-events-none" />
 
     <div className="section-container max-w-3xl relative">
-      <SectionHeading eyebrow="FAQ" title="Perguntas frequentes" light />
+      <div className="[&_h2]:!text-primary-foreground [&_p]:!text-primary-foreground/80">
+        <SectionHeading eyebrow="FAQ" title="Perguntas frequentes" />
+      </div>
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
           <AccordionItem key={i} value={`item-${i}`} className="reveal-on-scroll bg-card border border-border rounded-2xl px-5 shadow-card">
