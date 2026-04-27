@@ -42,7 +42,7 @@ export const Header = ({ onRemoteAccess }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
+      className={`fixed top-8 inset-x-0 z-50 transition-smooth ${
         scrolled ? "bg-background/90 backdrop-blur-lg shadow-card" : "bg-background/70 backdrop-blur-md"
       }`}
     >
