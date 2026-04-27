@@ -48,7 +48,7 @@ export const WebsiteCreation = () => {
       <div className="section-container">
         <SectionHeading
           eyebrow="Criação de Sites"
-          title="Criação de sites profissionais para negócios locais"
+          title="Criação de sites profissionais"
           subtitle="Sites modernos, responsivos e otimizados para ajudar empresas, comércios, profissionais autônomos a terem presença digital com mais credibilidade, alta captação de clientes e conversão."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">

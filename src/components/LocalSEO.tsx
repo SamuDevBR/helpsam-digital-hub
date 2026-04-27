@@ -8,7 +8,7 @@ export const LocalSEO = () => (
         <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-blue mx-auto mb-6 shadow-button">
           <MapPin className="w-7 h-7 text-primary-foreground" />
         </div>
-        <SectionHeading title="Suporte de TI em Araçatuba, Birigui e região" />
+        <SectionHeading eyebrow="Atendimento rápido na sua região" title="Suporte de TI em Araçatuba, Birigui e região" />
 
         <p className="text-base lg:text-lg text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto -mt-4 mb-10">
           Nosso foco é ajudar residências, comércios, profissionais autônomos e pequenas empresas que precisam resolver problemas de tecnologia, melhorar processos, criar presença digital ou desenvolver ferramentas sob medida.

@@ -18,7 +18,7 @@ export const ServicesIT = () => (
     <div className="section-container">
       <SectionHeading
         eyebrow="Serviços"
-        title="Serviços de TI em Araçatuba, Birigui e região"
+        title="Serviços de informática"
         subtitle="Resolva problemas técnicos com segurança, agilidade e profissionalismo. A HELPSAM oferece suporte para computadores, notebooks, redes, impressoras, programas e sistemas, com atendimento remoto e presencial conforme disponibilidade."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

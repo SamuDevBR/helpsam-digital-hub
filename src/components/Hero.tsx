@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Wrench, Laptop, Globe, Code2, Bot, Sparkles } from "lucide-react";
 import { whatsappLink } from "@/lib/contact";
-import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export const Hero = () => {
   return (
     <section id="inicio" className="relative pt-28 lg:pt-36 pb-20 lg:pb-28 overflow-hidden bg-gradient-soft">
-      {/* Background video (all breakpoints) */}
+      {/* Background video (all breakpoints) - swap file at /public/video/hero.mp4 */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <video
-          src={heroVideo.url}
+          src="/video/hero.mp4"
           autoPlay
           muted
           loop
