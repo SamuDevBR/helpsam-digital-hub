@@ -20,7 +20,7 @@ export const TopBar = () => (
       </div>
       {/* Mobile: marquee */}
       <div className="md:hidden w-full overflow-hidden">
-        <div className="flex gap-10 whitespace-nowrap animate-[marquee_22s_linear_infinite]">
+        <div className="flex gap-10 whitespace-nowrap animate-[marquee_12s_linear_infinite]">
           {[...items, ...items, ...items].map(({ icon: Icon, label }, i) => (
             <span key={i} className="inline-flex items-center gap-2 shrink-0">
               <Icon className="w-3.5 h-3.5" />

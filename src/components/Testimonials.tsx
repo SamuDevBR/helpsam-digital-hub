@@ -47,7 +47,7 @@ export const Testimonials = () => {
               <article key={`${index}-${i}`} className="bg-card rounded-2xl p-6 border border-border shadow-card animate-fade-up">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, s) => (
-                    <Star key={s} className="w-4 h-4 fill-primary text-primary" />
+                    <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
                 <Quote className="w-7 h-7 text-primary/20 mb-2" />
