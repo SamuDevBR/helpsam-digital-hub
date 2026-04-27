@@ -15,7 +15,7 @@ const navItems = [
   { label: "IA e Chatbots", href: "#ia" },
   { label: "Criação de Sites", href: "#sites" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Como Funciona?", href: "#como-funciona" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
