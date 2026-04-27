@@ -12,7 +12,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { About } from "@/components/About";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
-import { FinalCTA } from "@/components/FinalCTA";
+
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -45,7 +45,6 @@ const Index = () => {
         <About />
         <Testimonials />
         <FAQ />
-        <FinalCTA />
         <ContactForm />
       </main>
       <Footer />
