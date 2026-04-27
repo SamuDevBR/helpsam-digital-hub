@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useReveal } from "@/hooks/use-reveal";
 import { Header } from "@/components/Header";
+import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/Hero";
-import { Differentials } from "@/components/Differentials";
 import { ServicesIT } from "@/components/ServicesIT";
 import { WebsiteCreation } from "@/components/WebsiteCreation";
 import { AIChatbots } from "@/components/AIChatbots";
@@ -32,10 +32,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Header onRemoteAccess={handleRemoteAccess} />
-      <main>
+      <main className="pt-8">
         <Hero />
-        <Differentials />
         <ServicesIT />
         <WebsiteCreation />
         <AIChatbots />

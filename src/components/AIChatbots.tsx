@@ -5,12 +5,21 @@ import { Button } from "@/components/ui/button";
 import aiBg from "@/assets/ai-bg.jpg";
 
 const items = [
-  { icon: Bot, title: "Chatbots para atendimento inicial", text: "Responda dúvidas frequentes, colete informações e direcione clientes de forma automática." },
-  { icon: FileQuestion, title: "Bots para orçamentos", text: "Receba solicitações de orçamento com perguntas organizadas e respostas padronizadas." },
-  { icon: BrainCircuit, title: "Assistente virtual com IA", text: "Crie um assistente para apoiar atendimentos, gerar respostas e organizar informações." },
-  { icon: Send, title: "Automação de mensagens", text: "Envie lembretes, confirmações, notificações e respostas automáticas." },
-  { icon: FileText, title: "IA para textos e documentos", text: "Use inteligência artificial para criar textos comerciais, organizar documentos e padronizar comunicações." },
-  { icon: Database, title: "Sistemas personalizados", text: "Desenvolvemos sistemas simples e práticos para controle de clientes, orçamentos, agendamentos, estoque, chamados e processos internos." },
+  {
+    icon: Bot,
+    title: "Chatbots e atendimento automático",
+    text: "Bots para atendimento inicial, dúvidas frequentes, orçamentos, captação de clientes e envio automático de mensagens, lembretes e confirmações.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Assistentes e IA para conteúdo",
+    text: "Assistentes virtuais com IA para apoiar atendimentos, gerar respostas, criar textos comerciais e organizar documentos e comunicações.",
+  },
+  {
+    icon: Database,
+    title: "Sistemas e automações sob medida",
+    text: "Sistemas personalizados para clientes, orçamentos, agendamentos, estoque, chamados e processos internos, com automações que aumentam a produtividade.",
+  },
 ];
 
 export const AIChatbots = () => (
