@@ -1,5 +1,6 @@
 import { Bot, FileQuestion, BrainCircuit, Send, FileText, Database, ArrowRight } from "lucide-react";
 import { ServiceCard } from "./ServiceCard";
+import { ScrollParallax3 } from "./ScrollParallax3";
 
 import { Button } from "@/components/ui/button";
 import aiBg from "@/assets/ai-bg.jpg";
