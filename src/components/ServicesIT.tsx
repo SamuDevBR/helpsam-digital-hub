@@ -22,7 +22,13 @@ export const ServicesIT = () => (
         title="Serviços de informática"
         subtitle="Resolva problemas técnicos com segurança, agilidade e profissionalismo. A HELPSAM oferece suporte para computadores, notebooks, redes, impressoras, programas e sistemas, com atendimento remoto e presencial conforme disponibilidade."
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* Mobile: stacking cards effect; Desktop: grid */}
+      <div className="md:hidden">
+        <StackingCards>
+          {services.map((s) => <ServiceCard key={s.title} {...s} />)}
+        </StackingCards>
+      </div>
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5">
         {services.map((s) => <ServiceCard key={s.title} {...s} />)}
       </div>
     </div>
