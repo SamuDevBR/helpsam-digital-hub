@@ -5,6 +5,7 @@ import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { StackingCards } from "./StackingCards";
 
 import siteAdvocacia from "@/assets/site-advocacia.jpg";
 import siteAutomecanica from "@/assets/site-automecanica.jpg";
