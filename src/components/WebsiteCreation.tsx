@@ -52,7 +52,12 @@ export const WebsiteCreation = () => {
           title="Criação de sites profissionais"
           subtitle="Sites modernos, responsivos e otimizados para ajudar empresas, comércios, profissionais autônomos a terem presença digital com mais credibilidade, alta captação de clientes e conversão."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+        <div className="md:hidden mb-12">
+          <StackingCards>
+            {items.map((s) => <ServiceCard key={s.title} {...s} />)}
+          </StackingCards>
+        </div>
+        <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
           {items.map((s) => <ServiceCard key={s.title} {...s} />)}
         </div>
 
