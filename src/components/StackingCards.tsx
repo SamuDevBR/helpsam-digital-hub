@@ -33,15 +33,13 @@ export const StackingCards = ({
         className="relative flex items-start justify-center"
       >
         <div
-          className="sticky w-full transition-transform duration-300 ease-out"
+          className="sticky w-full"
           style={{
             top: `${topOffset + i * step}px`,
             zIndex: i + 1,
           }}
         >
-          <div className="rounded-2xl bg-card shadow-card-hover">
-            {child}
-          </div>
+          {child}
         </div>
       </div>
     ))}
