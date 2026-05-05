@@ -4,9 +4,9 @@ interface Props {
   children: ReactNode[];
   /** offset from top of viewport for the first card (px). */
   topOffset?: number;
-  /** extra offset added per index so each stacked card peeks below the previous. */
+  /** extra offset added per index so each stacked card can peek below the previous. */
   step?: number;
-  /** vertical scroll distance per card — controls when the next card slides up over the previous. */
+  /** kept for compatibility; the stack now uses the cards' natural height for tighter overlap. */
   slotMinHeight?: string;
   /** initial spacing between cards (so card 2 already peeks below card 1 before scrolling). */
   gap?: string;
@@ -24,9 +24,8 @@ interface Props {
 export const StackingCards = ({
   children,
   topOffset = 88,
-  step = 12,
-  slotMinHeight = "55vh",
-  gap = "1.25rem",
+  step = 0,
+  gap = "0.75rem",
   className = "",
 }: Props) => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -44,7 +43,7 @@ export const StackingCards = ({
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
     );
     cards.forEach((c) => io.observe(c));
     return () => io.disconnect();
@@ -55,23 +54,15 @@ export const StackingCards = ({
       {children.map((child, i) => (
         <div
           key={i}
-          style={{ minHeight: i === children.length - 1 ? undefined : slotMinHeight }}
-          className="relative"
+          data-stack-card
+          className="sticky opacity-0 transition-opacity duration-500 ease-out [&.is-in]:opacity-100 [&_.reveal-on-scroll]:!opacity-100 [&_.reveal-on-scroll]:!translate-y-0"
+          style={{
+            top: `${topOffset + i * step}px`,
+            zIndex: i + 1,
+            willChange: "opacity",
+          }}
         >
-          <div
-            className="sticky"
-            style={{
-              top: `${topOffset + i * step}px`,
-              zIndex: i + 1,
-            }}
-          >
-            <div
-              data-stack-card
-              className="opacity-0 translate-y-6 transition-all duration-700 ease-out [&.is-in]:opacity-100 [&.is-in]:translate-y-0 will-change-transform"
-            >
-              {child}
-            </div>
-          </div>
+          {child}
         </div>
       ))}
     </div>
