@@ -1,6 +1,7 @@
 import { Wrench, MonitorCog, HardDrive, Download, Printer, Wifi, MonitorSmartphone, BookOpen } from "lucide-react";
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
+import { StackingCards } from "./StackingCards";
 
 const services = [
   { icon: Wrench, title: "Manutenção de computadores e notebooks", text: "Diagnóstico, limpeza, correções, melhorias de desempenho e suporte técnico para computadores e notebooks." },
