@@ -53,8 +53,12 @@ export const AIChatbots = () => (
           A HELPSAM cria soluções com IA para ajudar sua empresa a responder clientes, organizar informações, automatizar atendimentos e aumentar a produtividade.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-        {items.map((s) => <ServiceCard key={s.title} {...s} />)}
+      <div className="mb-12">
+        <ScrollParallax3
+          left={<ServiceCard {...items[0]} />}
+          center={<ServiceCard {...items[1]} />}
+          right={<ServiceCard {...items[2]} />}
+        />
       </div>
       <div className="bg-gradient-hero rounded-3xl p-8 lg:p-12 text-center shadow-glow relative overflow-hidden">
         <div
