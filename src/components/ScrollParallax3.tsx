@@ -1,82 +1,67 @@
-import { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface Props {
   left: ReactNode;
   center: ReactNode;
   right: ReactNode;
-  /** max horizontal travel in px on mobile. */
-  distance?: number;
 }
 
 /**
- * Lightweight scroll-driven horizontal parallax for 3 cards.
- * Uses IntersectionObserver + a single rAF-throttled scroll handler.
- * Animates only `transform` for performance.
+ * Mobile slide-in for 3 cards:
+ *  - left card: slides in from the right (→ ←)
+ *  - center card: slides in from the left (← →)
+ *  - right card: slides in from the right (→ ←)
  *
- * Effect is mobile-only; on md+ shows a simple 3-column grid.
+ * Uses IntersectionObserver to trigger CSS transforms — no scroll listeners.
  */
-export const ScrollParallax3 = ({ left, center, right, distance = 60 }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0); // -1 .. 1, 0 when centered
-  const [active, setActive] = useState(false);
+export const ScrollParallax3 = ({ left, center, right }: Props) => {
+  const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    const root = wrapRef.current;
+    if (!root) return;
 
-    const el = ref.current;
-    if (!el) return;
+    const targets = root.querySelectorAll<HTMLElement>("[data-slide]");
+    if (reduce) {
+      targets.forEach((el) => el.classList.add("is-in"));
+      return;
+    }
 
     const io = new IntersectionObserver(
-      ([entry]) => setActive(entry.isIntersecting),
-      { threshold: 0 }
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            (e.target as HTMLElement).classList.add("is-in");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
     );
-    io.observe(el);
-
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      const rect = el.getBoundingClientRect();
-      const vh = window.innerHeight || 1;
-      // 0 when section center is at viewport center, -1 entering, 1 leaving
-      const center = rect.top + rect.height / 2;
-      const p = (center - vh / 2) / (vh / 2 + rect.height / 2);
-      setProgress(Math.max(-1, Math.min(1, p)));
-    };
-    const onScroll = () => {
-      if (raf) return;
-      raf = requestAnimationFrame(update);
-    };
-    if (active) {
-      window.addEventListener("scroll", onScroll, { passive: true });
-      update();
-    }
-    return () => {
-      io.disconnect();
-      window.removeEventListener("scroll", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, [active]);
-
-  // On mobile we render a vertical stack and offset left/right cards horizontally.
-  // -progress so cards spread apart as section enters, recenter at middle, then close.
-  const t = -progress * distance;
+    targets.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <div ref={ref}>
-      {/* Mobile: parallax stack */}
-      <div className="md:hidden flex flex-col gap-5 will-change-transform">
+    <div ref={wrapRef}>
+      {/* Mobile: slide-in stack */}
+      <div className="md:hidden flex flex-col gap-5 overflow-hidden">
         <div
-          style={{ transform: `translate3d(${-t}px,0,0)` }}
-          className="transition-transform duration-75 ease-out"
+          data-slide
+          className="opacity-0 translate-x-16 transition-all duration-700 ease-out [&.is-in]:opacity-100 [&.is-in]:translate-x-0 will-change-transform"
         >
           {left}
         </div>
-        <div>{center}</div>
         <div
-          style={{ transform: `translate3d(${t}px,0,0)` }}
-          className="transition-transform duration-75 ease-out"
+          data-slide
+          className="opacity-0 -translate-x-16 transition-all duration-700 ease-out [&.is-in]:opacity-100 [&.is-in]:translate-x-0 will-change-transform"
+        >
+          {center}
+        </div>
+        <div
+          data-slide
+          className="opacity-0 translate-x-16 transition-all duration-700 ease-out [&.is-in]:opacity-100 [&.is-in]:translate-x-0 will-change-transform"
         >
           {right}
         </div>
