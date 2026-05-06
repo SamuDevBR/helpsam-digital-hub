@@ -2,16 +2,24 @@ import { Wrench, MonitorCog, HardDrive, Download, Printer, Wifi, MonitorSmartpho
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeading } from "./SectionHeading";
 import { StackingCards } from "./StackingCards";
+import imgManutencao from "@/assets/service-manutencao.jpg";
+import imgWindows from "@/assets/service-windows.jpg";
+import imgUpgrade from "@/assets/service-upgrade.jpg";
+import imgProgramas from "@/assets/service-programas.jpg";
+import imgImpressora from "@/assets/service-impressora.jpg";
+import imgRede from "@/assets/service-rede.jpg";
+import imgRemoto from "@/assets/service-remoto.jpg";
+import imgConsultoria from "@/assets/service-consultoria.jpg";
 
 const services = [
-  { icon: Wrench, title: "Manutenção de computadores e notebooks", text: "Diagnóstico, limpeza, correções, melhorias de desempenho e suporte técnico para computadores e notebooks." },
-  { icon: MonitorCog, title: "Formatação e instalação de Windows", text: "Instalação limpa, configuração inicial, drivers, programas essenciais e otimização do equipamento." },
-  { icon: HardDrive, title: "Upgrade de SSD e memória RAM", text: "Mais velocidade e desempenho para computadores e notebooks com troca de HD por SSD e expansão de memória." },
-  { icon: Download, title: "Instalação de programas", text: "Configuração de softwares, ferramentas de trabalho, antivírus, pacote Office e aplicativos essenciais." },
-  { icon: Printer, title: "Configuração de impressoras", text: "Instalação, compartilhamento em rede, configuração de impressão e solução de erros." },
-  { icon: Wifi, title: "Redes, Wi-Fi e internet", text: "Configuração de roteadores, pontos de acesso, cabeamento, rede local e ajustes de conexão." },
-  { icon: MonitorSmartphone, title: "Suporte remoto", text: "Ajuda rápida à distância para resolver problemas sem precisar de visita presencial." },
-  { icon: BookOpen, title: "Consultoria em TI", text: "Orientação para melhorar equipamentos, processos, ferramentas e estrutura tecnológica do seu negócio." },
+  { icon: Wrench, title: "Manutenção de computadores e notebooks", text: "Diagnóstico, limpeza, correções, melhorias de desempenho e suporte técnico para computadores e notebooks.", image: imgManutencao },
+  { icon: MonitorCog, title: "Formatação e instalação de Windows", text: "Instalação limpa, configuração inicial, drivers, programas essenciais e otimização do equipamento.", image: imgWindows },
+  { icon: HardDrive, title: "Upgrade de SSD e memória RAM", text: "Mais velocidade e desempenho para computadores e notebooks com troca de HD por SSD e expansão de memória.", image: imgUpgrade },
+  { icon: Download, title: "Instalação de programas", text: "Configuração de softwares, ferramentas de trabalho, antivírus, pacote Office e aplicativos essenciais.", image: imgProgramas },
+  { icon: Printer, title: "Configuração de impressoras", text: "Instalação, compartilhamento em rede, configuração de impressão e solução de erros.", image: imgImpressora },
+  { icon: Wifi, title: "Redes, Wi-Fi e internet", text: "Configuração de roteadores, pontos de acesso, cabeamento, rede local e ajustes de conexão.", image: imgRede },
+  { icon: MonitorSmartphone, title: "Suporte remoto", text: "Ajuda rápida à distância para resolver problemas sem precisar de visita presencial.", image: imgRemoto },
+  { icon: BookOpen, title: "Consultoria em TI", text: "Orientação para melhorar equipamentos, processos, ferramentas e estrutura tecnológica do seu negócio.", image: imgConsultoria },
 ];
 
 export const ServicesIT = () => (
